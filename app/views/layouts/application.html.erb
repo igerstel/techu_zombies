@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechUZombies</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- IF BROWSER < IE9 -->
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <!-- ENDIF -->
+</head>
+<body>
+<br><br><br><br>
+<div class="container">
+	<div class="row">
+		<div class="span4">
+			<div class="btn-toolbar">
+			  <div class="btn-group">
+					<button class="btn"><a href="/">INFO PAGE</a></button><br>
+					<button class="btn">
+				    <div class="accordion-heading">
+				      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+				        PREVENTING AN OUTBREAK
+				      </a>
+				    </div>
+				  </button>
+				  <br>
+					<button class="btn">
+				    <div class="accordion-heading">
+				      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">
+					      SURVIVING THE APOCALYPSE
+				      </a>
+				    </div>
+					</button><br><br>
+					<button class="btn"><a href="/about/">ABOUT THE ZOMBIE EXPERTS</a></button>
+				</div>
+			</div>
+		</div>
+		<div class="span8">
+			<%= yield %>
+		</div>
+	</div>
+</div>
+</body>
+</html>
